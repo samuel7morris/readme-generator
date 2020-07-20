@@ -48,20 +48,57 @@ function promptUser() {
             name: "testing",
             message: "give testing instructions:",
         },
-        
-    
+        {
+            type: "list",
+            name: "licensing",
+            message: "give testing instructions:",
+            choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3"]
+        },
+
+        {
+            type: "input",
+            name: "github",
+            message: "Enter github username",
+        },
+        {
+            type: "input",
+            name: "githubLINK",
+            message: "Enter github profile link",
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "enter your email here",
+        },
+
     ])
 }
 
+function retrieveShield (answers) {
+return `![github license] (src: https://img.shields.io/badge/license-${answers}-blue.svg)
+
+`
+}
+
 function generateReadMe (answers) {
-    return `
-    Title: ${answers.title} 
-    Description: ${answers.description}
-    Instructions: ${answers.instructions}
-    Usage: ${answers.usage}
-    Contribution guidelines: ${answers.contribution}
-    Testing guidelines ${answers.testing}
-    `
+return `${retrieveShield(answers.licensing)}
+Title: ${answers.title}
+Table of Contents:
+1. [Description](#Description)
+2. [Instructions](#Instructions)
+3. [Usage](#Usage)
+4. [Contribution](#Contribution)
+5. [Testing](#Testing)
+-------------------------------------------------------------------------------------
+Description: ${answers.description}
+Instructions: ${answers.instructions}
+Usage: ${answers.usage}
+Contribution: ${answers.contribution}
+Testing: ${answers.testing}
+-- Questions --
+GitHub: ${answers.github}
+Email: ${answers.email}
+`
 }
 
 
@@ -69,7 +106,7 @@ promptUser()
   .then(function(answers) {
     const README = generateReadMe(answers);
 
-    return writeFileAsync("README.md", README);
+    return writeFileAsync("yourREADME.md", README);
   })
   .then(function() {
     console.log("Successfully wrote to README.md");
