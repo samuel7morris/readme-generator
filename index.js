@@ -51,8 +51,8 @@ function promptUser() {
         {
             type: "list",
             name: "licensing",
-            message: "give testing instructions:",
-            choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3"]
+            message: "choose licensing option instructions:",
+            choices: ["MIT", "APACHE2.0", "GPL3.0", "BSD3"]
         },
 
         {
@@ -80,8 +80,8 @@ return `![npm](https://img.shields.io/static/v1?label=npm&message=${answers}&col
 }
 
 function generateReadMe (answers) {
-return `
-Title: ${answers.title} ${retrieveShield(answers.licensing)}
+return `${retrieveShield(answers.licensing)}
+Title: ${answers.title} \n
 Table of Contents:
 1. [Description](#Description)
 2. [Instructions](#Instructions)
