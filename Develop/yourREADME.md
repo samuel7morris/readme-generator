@@ -1,7 +1,6 @@
-![github license] (src: https://img.shields.io/badge/license-MIT-blue.svg)
 
+Title: sdfgdfg ![npm](https://img.shields.io/static/v1?label=npm&message=MIT&color=blue)
 
-Title: sdfg
 Table of Contents:
 1. [Description](#Description)
 2. [Instructions](#Instructions)
@@ -9,12 +8,19 @@ Table of Contents:
 4. [Contribution](#Contribution)
 5. [Testing](#Testing)
 -------------------------------------------------------------------------------------
-Description: sdfgsd
-Instructions: f
-Usage: gds
-Contribution: gds
-Testing: g
--- Questions --
-GitHub: sgd
-Email: sdfg
-    
+Description: dfg 
+
+Instructions: ds 
+
+Usage: fg 
+
+Contribution: dsfg 
+
+Testing: ds 
+
+-- Questions -- 
+
+GitHub: fgdf 
+
+Email: sdfg 
+

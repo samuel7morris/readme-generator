@@ -75,14 +75,13 @@ function promptUser() {
 }
 
 function retrieveShield (answers) {
-return `![github license] (src: https://img.shields.io/badge/license-${answers}-blue.svg)
-
+return `![npm](https://img.shields.io/static/v1?label=npm&message=${answers}&color=blue)
 `
 }
 
 function generateReadMe (answers) {
-return `${retrieveShield(answers.licensing)}
-Title: ${answers.title}
+return `
+Title: ${answers.title} ${retrieveShield(answers.licensing)}
 Table of Contents:
 1. [Description](#Description)
 2. [Instructions](#Instructions)
@@ -90,14 +89,14 @@ Table of Contents:
 4. [Contribution](#Contribution)
 5. [Testing](#Testing)
 -------------------------------------------------------------------------------------
-Description: ${answers.description}
-Instructions: ${answers.instructions}
-Usage: ${answers.usage}
-Contribution: ${answers.contribution}
-Testing: ${answers.testing}
--- Questions --
-GitHub: ${answers.github}
-Email: ${answers.email}
+Description: ${answers.description} \n
+Instructions: ${answers.instructions} \n
+Usage: ${answers.usage} \n
+Contribution: ${answers.contribution} \n
+Testing: ${answers.testing} \n
+-- Questions -- \n
+GitHub: ${answers.github} \n
+Email: ${answers.email} \n
 `
 }
 
